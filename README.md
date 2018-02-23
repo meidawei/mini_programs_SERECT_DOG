@@ -1,0 +1,2 @@
+# mini_programs_SERECT_DOG
+一个微信小程序，发一下加密的微信朋友圈信息
