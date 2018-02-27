@@ -1,4 +1,17 @@
 /*加密按钮的样式*/
 .button_jiami{
-  margin-top: 80rpx;
+  margin: 80rpx;
+}
+
+.section{
+  font-size: 40rpx;
+  text-align: center;
+}
+
+.section_text{
+  border: 1px solid #ddd;
+  padding: 10rpx;
+  color: #444;
+  font-size: 50rpx;
+  margin: 40rpx;
 }

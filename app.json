@@ -2,7 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/demo/picker/picker"
+    "pages/demo/button/button",
+    "pages/demo/picker/picker",
+    "pages/demo/textarea/textarea"
   ],
   "window": {
     "backgroundTextStyle": "light",

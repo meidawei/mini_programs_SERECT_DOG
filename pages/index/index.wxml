@@ -1,4 +1,29 @@
 <view>
+  <!-- 单选栏开始 -->
+  <view class="section">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        点击选择加密方式：{{array[index]}}
+      </view>
+    </picker>
+  </view>
+  <!-- 单选栏结束 -->
+  
+  <!-- 加密原文开始 -->
+  <view class="section_text">
+    <textarea placeholder="请输入需要加密的文本" value="{{text_new}}"/>
+  </view>
+  <!-- 加密原文结束 -->
+
+  <!-- 密文开始 -->
+  <view class="section_text">
+    <textarea placeholder="展示加密后的文本" value="{{text_after}}"/>
+  </view>
+  <!-- 密文结束 -->
+
+  <!-- 加密按钮开始 -->
   <button type="primary" class='button_jiami' loading="{{loading}}" bindtap="getSerect">加密</button>
+  <!-- 加密按钮结束 -->
   <button size="mini" bindtap="openDemoPicker">openDemoPicker</button>
+  <button size="mini" bindtap="openDemoTextarea">openDemoTextarea</button>
 </view>
