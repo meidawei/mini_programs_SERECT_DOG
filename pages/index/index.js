@@ -2,21 +2,23 @@
 //获取应用实例
 var pageObject = {
   data: {
-    defaultSize: 'default',
-    primarySize: 'default',
-    warnSize: 'default',
-    disabled: false,
-    plain: false,
     loading: false
   },
-  setPlain: function (e) {
-    this.setData({
-      plain: !this.data.plain
+  getSerect: function (e) {
+    var self = this;
+    //伪loading
+    self.setData({
+      loading: true
     })
+    setTimeout(function () {
+      self.setData({
+        loading: false
+      })
+    }, 1500)
   },
-  setLoading: function (e) {
-    this.setData({
-      loading: !this.data.loading
+  openDemoPicker:function(){
+    wx.navigateTo({
+      url: '../demo/picker/picker'
     })
   }
 }
