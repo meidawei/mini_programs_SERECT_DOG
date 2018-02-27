@@ -2,13 +2,12 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/demo/button/button",
     "pages/demo/picker/picker"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "小羊加密",
     "navigationBarTextStyle": "black"
   }
 }

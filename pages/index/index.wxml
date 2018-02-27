@@ -1,5 +1,4 @@
 <view>
-  
   <button type="primary" class='button_jiami' loading="{{loading}}" bindtap="getSerect">加密</button>
   <button size="mini" bindtap="openDemoPicker">openDemoPicker</button>
 </view>
