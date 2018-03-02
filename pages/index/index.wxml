@@ -10,8 +10,8 @@
   <!-- 单选栏结束 -->
   
   <!-- 加密原文开始 -->
-  <view class="section_text">
-    <textarea placeholder="请输入需要加密的文本" value="{{text_new}}"/>
+  <view class="section_text"> 
+    <textarea placeholder="请输入需要加密的文本" bindinput="getFirstTextarea"/>
   </view>
   <!-- 加密原文结束 -->
 
