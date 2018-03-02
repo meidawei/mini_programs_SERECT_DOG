@@ -25,11 +25,19 @@ var pageObject = {
   //加密按钮
   getSerect: function (e) {
     var self = this;
+    var text_new = self.data.text_new;
+    if (!text_new) {
+      wx.showToast({
+        title: "请填写需要加密的文本",
+        duration: 1000,
+        icon: "none"
+      })
+      return;
+    }
     self.setData({
       loading: true
     })
     //base64加密
-    var text_new = self.data.text_new;
     var text_after = "";
 
     switch (self.data.index) {
@@ -39,15 +47,46 @@ var pageObject = {
         text_after = str_base64_encode;
     }
     //base64解密
-    //var str_base64_decode = obj_base64.decode(str_base64_encode);
-
     setTimeout(function () {
       //伪loading
       self.setData({
         loading: false,
         text_after: text_after
       });
+      wx.showToast({
+        title: "加密成功",
+        duration: 1000
+      });
     }, 500)
+  },
+  //复制加密后的密文
+  copySerect: function () {
+    var secect = this.data.text_after;
+    if (!secect) {
+      wx.showToast({
+        title: "请进行文本加密后复制",
+        duration: 1000,
+        icon: "none"
+      })
+      return;
+    }    
+    wx.setClipboardData({
+      data: secect,
+      success: function (res) {
+        wx.showToast({
+          title: "复制成功",
+          duration: 1000,
+          icon: "none"
+        });
+      },
+      fail: function () {
+        wx.showToast({
+          title: "复制失败,请重试！",
+          duration: 1000,
+          icon: "none"
+        });
+      }
+    })
   },
   //单选事件选择加密方式
   bindPickerChange: function (e) {

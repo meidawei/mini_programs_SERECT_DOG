@@ -23,7 +23,8 @@
 
   <!-- 加密按钮开始 -->
   <button type="primary" class='button_jiami' loading="{{loading}}" bindtap="getSerect">加密</button>
+  <button type="primary" class='button_jiami' bindtap="copySerect">复制</button>
   <!-- 加密按钮结束 -->
-  <button size="mini" bindtap="openDemoPicker">openDemoPicker</button>
-  <button size="mini" bindtap="openDemoTextarea">openDemoTextarea</button>
+  <!-- <button size="mini" bindtap="openDemoPicker">openDemoPicker</button>
+  <button size="mini" bindtap="openDemoTextarea">openDemoTextarea</button> -->
 </view>
